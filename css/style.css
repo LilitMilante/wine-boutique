@@ -11,13 +11,23 @@
 
 a {
   color: #FFFFFF;
+  text-align: center;
 }
 
 body {
-  max-width: 1920px;
+  display: -ms-grid;
+  display: grid;
+}
+
+.root {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 100%;
 }
 
 .container {
+  display: -ms-grid;
+  display: grid;
   max-width: 1110px;
   width: 100%;
   -ms-grid-column-align: center;
@@ -27,8 +37,8 @@ body {
 .header {
   display: -ms-grid;
   display: grid;
-  background-image: url("/imagins/backgraund-img.jpg"), -webkit-gradient(linear, left top, left bottom, from(#282828), to(rgba(40, 40, 40, 0)));
-  background-image: url("/imagins/backgraund-img.jpg"), linear-gradient(180deg, #282828 0%, rgba(40, 40, 40, 0) 100%);
+  background: url("/imagins/backgraund-img.jpg") no-repeat top center, -webkit-gradient(linear, left top, left bottom, from(#282828), to(rgba(40, 40, 40, 0)));
+  background: url("/imagins/backgraund-img.jpg") no-repeat top center, linear-gradient(180deg, #282828 0%, rgba(40, 40, 40, 0) 100%);
 }
 
 .header__contacts {
@@ -338,6 +348,7 @@ body {
   font-weight: 500;
   font-size: 13px;
   color: #FFFFFF;
+  outline: none;
 }
 
 .form__contacts input::-webkit-input-placeholder {
@@ -371,6 +382,7 @@ body {
 .form__contacts > button:hover {
   background: #998431;
   color: #282828;
+  border-color: #998431;
 }
 
 .contacts__form {

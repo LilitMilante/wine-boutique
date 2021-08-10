@@ -6,6 +6,7 @@
 $text-white: #FFFFFF;
 $text-black:  #282828;
 $text-gold: #998431;
+
 * {
     padding: 0;
     margin: 0;
@@ -14,16 +15,27 @@ $text-gold: #998431;
     box-sizing: border-box;
 }
 
+
+
+
 a {
     color: $text-white;
-    
+    text-align: center;
 }
 
 body {
-    max-width: 1920px;
+    display: grid;
+}
+
+
+.root {
+    justify-self: center;
+    // max-width: 1920px;
+    width: 100%;
 }
 
 .container {
+    display: grid;
     max-width: 1110px;
     width: 100%;
     justify-self: center;
@@ -31,7 +43,7 @@ body {
 }
 .header {
     display: grid;
-    background-image: url("/imagins/backgraund-img.jpg"), linear-gradient(180deg, #282828 0%, rgba(40, 40, 40, 0) 100%);
+    background: url("/imagins/backgraund-img.jpg") no-repeat top center, linear-gradient(180deg, #282828 0%, rgba(40, 40, 40, 0) 100%);
     
 
 		&__contacts {
@@ -314,6 +326,7 @@ body {
             font-weight: 500;
             font-size: 13px;
             color: $text-white;
+            outline: none;
 
             &::placeholder {
                 color: $text-white;
@@ -334,6 +347,7 @@ body {
             &:hover {
                 background: $text-gold;
                 color: $text-black;
+                border-color: $text-gold;
             }
         }
         }
